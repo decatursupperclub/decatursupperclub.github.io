@@ -1,0 +1,49 @@
+@import 'variables';
+// Begin nav menu styling
+.current {
+  color: $secondary-brand-color;
+}
+// End nav menu styling
+
+// Begin Google Font CSS classes
+.kranky-regular {
+  font-family: "Kranky", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.mclaren-regular {
+  font-family: "McLaren", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+// End Google Font CSS classes
+
+// Begin basic font stylings across the site
+
+html, body {
+  background-color: $site-background-color;
+
+  h1, h2, h3, h4, h5, h6 {
+  font-family: $font-headings;
+}
+
+p, div {
+  font-family: $font-body;
+  font-size: $font-base-size;
+
+  a {
+    color: $primary-brand-color;
+  }
+
+}
+
+}
+
+// End basic font stylings across the site
+
+// Begin basic visual and layout styling across the site
+
+
+// End basic visual and layout styling across the site

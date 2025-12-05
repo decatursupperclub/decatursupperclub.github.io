@@ -1,0 +1,6 @@
+title: Decatur Supper Club
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
