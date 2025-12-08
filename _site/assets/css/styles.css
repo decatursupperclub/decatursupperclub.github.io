@@ -1,4 +1,12 @@
-.current { color: #752E27; }
+.nav-menu { display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 0.5em 0em; grid-auto-flow: row; grid-template-areas: "site-title site-subtitle" "nav-links"; }
+
+.current { color: #469e0e; }
+
+.site-title { font-family: "Kranky", serif, serif; font-size: 1.5em; color: #cd293a; text-transform: uppercase; }
+
+.site-title a { text-decoration: none !important; color: #cd293a; }
+
+.site-subtitle { font-family: "McLaren", sans-serif, sans-serif; font-size: 0.9em; margin-left: 10px; vertical-align: middle; font-style: italic; }
 
 .kranky-regular { font-family: "Kranky", serif; font-weight: 400; font-style: normal; }
 
@@ -7,4 +15,17 @@
 html, body { background-color: #f6f5ef; }
 html h1, html h2, html h3, html h4, html h5, html h6, body h1, body h2, body h3, body h4, body h5, body h6 { font-family: "Kranky", serif; }
 html p, html div, body p, body div { font-family: "McLaren", sans-serif; font-size: 16px; }
-html p a, html div a, body p a, body div a { color: #957351; }
+html p a, html div a, body p a, body div a { text-decoration: underline; color: #000000; }
+
+.wrapper { max-width: 100%; margin: 0 auto; padding: 1em; }
+
+.section-wrapper { max-width: 800px; margin: 0 auto; padding: 1em; }
+
+.button { background-color: #cd293a; color: #ffffff !important; padding: 10px 15px; text-decoration: none !important; text-transform: uppercase; width: fit-content; margin: 1em 0em 1em 0em; }
+.button:hover { background-color: #a3212e; color: #ffffff !important; }
+
+.why-a-supper-club { background-color: #ffffff; padding: 1em 2em 1em 2em; }
+
+.how-it-works { background-color: #f6f5ef; padding: 1em 2em 1em 2em; }
+
+.calendar { background-color: #ffffff; padding: 1em 2em 1em 2em; }

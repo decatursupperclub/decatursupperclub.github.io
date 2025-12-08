@@ -1,8 +1,42 @@
 @import 'variables';
+
 // Begin nav menu styling
+
+.nav-menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0.5em 0em;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "site-title site-subtitle"
+    "nav-links";
+}
+
 .current {
   color: $secondary-brand-color;
 }
+
+.site-title {
+  font-family: $font-headings, serif;
+  font-size: 1.5em;
+  color: $primary-brand-color;
+  text-transform: uppercase;
+}
+
+.site-title a {
+  text-decoration: none !important;
+  color: $primary-brand-color;
+}
+
+.site-subtitle {
+  font-family: $font-body, sans-serif;
+  font-size: 0.9em;
+  margin-left: 10px;
+  vertical-align: middle;
+  font-style: italic;
+}
+
 // End nav menu styling
 
 // Begin Google Font CSS classes
@@ -34,7 +68,8 @@ p, div {
   font-size: $font-base-size;
 
   a {
-    color: $primary-brand-color;
+    text-decoration: underline;
+    color: #000000;
   }
 
 }
@@ -45,5 +80,47 @@ p, div {
 
 // Begin basic visual and layout styling across the site
 
+.wrapper {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 1em;
+}
+
+.section-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1em;
+}
+
+.button {
+  background-color: $primary-brand-color;
+  color: $accent-color !important;
+  padding: 10px 15px;
+  text-decoration: none !important;
+  text-transform: uppercase;
+  width: fit-content;
+  margin: 1em 0em 1em 0em;
+  
+
+  &:hover {
+    background-color: darken($primary-brand-color, 10%);
+    color: $accent-color !important;
+  }
+}
+
+.why-a-supper-club {
+  background-color: $accent-color;
+  padding: 1em 2em 1em 2em;
+}
+
+.how-it-works {
+  background-color: $site-background-color;
+  padding: 1em 2em 1em 2em;
+}
+
+.calendar {
+  background-color: $accent-color;
+  padding: 1em 2em 1em 2em;
+}
 
 // End basic visual and layout styling across the site
