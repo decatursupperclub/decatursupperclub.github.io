@@ -3,8 +3,10 @@ description: The Decatur Supper Club is a potluck-style gathering of friends, ne
 theme: jekyll-theme-minimal
 baseurl: ""
 url: "https://decatursupperclub.github.io"
+remote_theme: pages-themes/minimal@v0.2.0
 
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-remote-theme
