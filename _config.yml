@@ -1,5 +1,7 @@
 title: Decatur Supper Club
 
+theme: jekyll-theme-minimal
+
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
