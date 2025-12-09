@@ -4,6 +4,7 @@ theme: jekyll-theme-minimal
 baseurl: ""
 url: "https://decatursupperclub.github.io"
 remote_theme: pages-themes/minimal@v0.2.0
+permalink: pretty
 
 plugins:
   - jekyll-feed

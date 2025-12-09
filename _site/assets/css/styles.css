@@ -18,6 +18,8 @@
 
 /** Hamburger icon **/
 .hamburger { position: absolute; top: 5em; right: 5%; margin-left: -2em; margin-top: -30px; width: 1.5em; height: 30px; z-index: 5; }
+.hamburger:hover { cursor: pointer; }
+.hamburger:hover div { background-color: #cd293a; }
 
 .hamburger div { position: relative; width: 2em; height: 5px; border-radius: 2px; background-color: black; margin-top: 5px; transition: all 0.3s ease-in-out; }
 
@@ -45,24 +47,62 @@ nav a:hover:before { height: 100%; }
 
 #toggle:checked + .hamburger + .nav { right: 0; }
 
+/** End nav menu styling **/
+/** Begin Google Font CSS classes **/
 .kranky-regular { font-family: "Kranky", serif; font-weight: 400; font-style: normal; }
 
 .mclaren-regular { font-family: "McLaren", sans-serif; font-weight: 400; font-style: normal; }
 
+/** End Google Font CSS classes **/
+/** Begin basic font stylings across the site **/
 html, body { background-color: #f6f5ef; }
 html h1, html h2, html h3, html h4, html h5, html h6, body h1, body h2, body h3, body h4, body h5, body h6 { font-family: "Kranky", serif; }
 html p, html div, body p, body div { font-family: "McLaren", sans-serif; font-size: 16px; }
-html p a, html div a, body p a, body div a { text-decoration: underline; color: #000000; }
+html p a, html div a, body p a, body div a { text-decoration: underline; color: black; }
 
+/** End basic font stylings across the site **/
+/** Begin basic visual and layout styling across the site **/
 .wrapper { max-width: 100%; margin: 0 auto; padding: 1em; }
 
 .section-wrapper { max-width: 800px; margin: 0 auto; padding: 1em; }
 
-.button { background-color: #cd293a; color: #ffffff !important; padding: 10px 15px; text-decoration: none !important; text-transform: uppercase; width: fit-content; margin: 1em 0em 1em 0em; }
-.button:hover { background-color: #a3212e; color: #ffffff !important; }
+.sign-up { padding: 5em 2em 2em 2em; margin-bottom: 2em; background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/images/zac-cain-YsHdlBSnsec-unsplash.avif"); background-size: cover; background-position: center; }
+.sign-up h1, .sign-up div { max-width: 800px; color: white; }
 
-.why-a-supper-club { background-color: #ffffff; padding: 1em 2em 1em 2em; }
+.button { background-color: #cd293a; color: #ffffff; padding: 10px 15px; text-decoration: none !important; text-transform: uppercase; width: fit-content; margin: 1em 0em 1em 0em; }
+.button a { color: #ffffff !important; text-decoration: none !important; }
+.button:hover { background-color: #b82534; border: 2px solid #ffffff; }
 
-.how-it-works { background-color: #f6f5ef; padding: 1em 2em 1em 2em; }
+.why-a-supper-club { background-color: #ffffff; padding: 1em 2em 1em 2em; display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: auto auto auto; gap: 1em 0.5em; grid-template-areas: "header header header" "fighting overcoming making" "footer footer footer"; }
+
+.why-a-supper-club > div:nth-child(1) { grid-area: header; text-align: center; }
+
+.why-a-supper-club > div:nth-child(2) { grid-area: fighting; }
+
+.why-a-supper-club > div:nth-child(3) { grid-area: overcoming; }
+
+.why-a-supper-club > div:nth-child(4) { grid-area: making; }
+
+.why-a-supper-club > div:nth-child(5) { grid-area: footer; }
+
+.how-it-works { background-color: #f6f5ef; padding: 2em; }
 
 .calendar { background-color: #ffffff; padding: 1em 2em 1em 2em; }
+
+/** End basic visual and layout styling across the site **/
+/** Begin footer styling **/
+.site-footer { background-color: black; color: #ffffff; padding: 2em 1em 2em 1em; margin-top: 2em; font-size: 0.9em; }
+.site-footer a { color: #ffffff; text-decoration: underline; }
+.site-footer a:hover { text-decoration: none; }
+.site-footer .footer-col-wrapper { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto auto; gap: 1.5em 2em; grid-template-areas: "site-name links" "made-in-decatur rss"; max-width: 1200px; margin: 0 auto; }
+.site-footer .footer-site-name { grid-area: site-name; text-align: left; }
+.site-footer .footer-links { grid-area: links; text-align: right; display: flex; flex-direction: column; gap: 0.5em; text-transform: uppercase; }
+.site-footer .footer-links a { text-decoration: none !important; font-size: 0.8em; }
+.site-footer .footer-links a:hover { text-decoration: underline !important; }
+.site-footer .footer-made-in-decatur { grid-area: made-in-decatur; text-align: left; font-size: 0.8em; }
+.site-footer .footer-rss { grid-area: rss; text-align: right; }
+.site-footer .footer-col { display: flex; flex-wrap: wrap; gap: 0 1em; justify-content: flex-end; }
+.site-footer .footer-policy-links { display: flex; gap: 1em; justify-content: flex-end; }
+.site-footer .u-url { font-family: "Kranky", serif; color: #ffffff; text-transform: uppercase; font-size: 1.2em; }
+
+/** End footer styling **/
