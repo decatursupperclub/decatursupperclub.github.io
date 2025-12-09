@@ -249,35 +249,36 @@ p, div {
 .why-a-supper-club {
   background-color: $accent-color;
   padding: 1em 2em 1em 2em;
-  display: grid; 
-  grid-template-columns: 1fr 1fr 1fr; 
-  grid-template-rows: auto auto auto; 
-  gap: 1em 0.5em; 
-  grid-template-areas: 
-    "header header header"
-    "fighting overcoming making"
-    "footer footer footer";
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
 }
 
-.why-a-supper-club > div:nth-child(1) {
-  grid-area: header;
-  text-align: center;
+.why-a-supper-club > div:first-child {
+  /* The "Why a Supper Club?" section - always full width */
+  width: 100%;
 }
 
-.why-a-supper-club > div:nth-child(2) {
-  grid-area: fighting;
-}
-
-.why-a-supper-club > div:nth-child(3) {
-  grid-area: overcoming;
-}
-
-.why-a-supper-club > div:nth-child(4) {
-  grid-area: making;
-}
-
-.why-a-supper-club > div:nth-child(5) {
-  grid-area: footer;
+/* Desktop: three columns for the middle sections */
+@media screen and (min-width: 599px) {
+  .why-a-supper-club {
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  
+  .why-a-supper-club > div:first-child {
+    flex: 0 0 100%;
+  }
+  
+  .why-a-supper-club > div:nth-child(2),
+  .why-a-supper-club > div:nth-child(3),
+  .why-a-supper-club > div:nth-child(4) {
+    flex: 1 1 calc(33.333% - 0.5em);
+  }
+  
+  .why-a-supper-club > div:last-child {
+    flex: 0 0 100%;
+  }
 }
 
 .how-it-works {
