@@ -213,17 +213,25 @@ p, div {
 
 .sign-up {
   padding: 5em 2em 2em 2em;
+  text-align: center;
   margin-bottom: 2em;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
               url('/assets/images/zac-cain-YsHdlBSnsec-unsplash.avif');
   background-size: cover;
   background-position: center;
-
+  
   h1, div {
     max-width: 800px;
     color: white;
+    margin-left: auto;
+    margin-right: auto;
   }
-
+  
+  /* Style the button to only span its content */
+  a, button {
+    display: inline-block;
+    width: auto;
+  }
 }
 
 .button {
@@ -252,18 +260,29 @@ p, div {
   display: flex;
   flex-direction: column;
   gap: 1.5em;
+  text-align: center;
+  > div {
+    text-align: center;
+  }
 }
-
 .why-a-supper-club > div:first-child {
   /* The "Why a Supper Club?" section - always full width */
   width: 100%;
 }
-
 /* Desktop: three columns for the middle sections */
 @media screen and (min-width: 599px) {
   .why-a-supper-club {
     flex-wrap: wrap;
     flex-direction: row;
+    column-gap: 3em;
+    row-gap: 1em;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center; /* Add this line */
+    > div {
+      text-align: center;
+    }
   }
   
   .why-a-supper-club > div:first-child {
@@ -273,22 +292,36 @@ p, div {
   .why-a-supper-club > div:nth-child(2),
   .why-a-supper-club > div:nth-child(3),
   .why-a-supper-club > div:nth-child(4) {
-    flex: 1 1 calc(33.333% - 0.5em);
+    flex: 0 1 25%; /* Fixed at 25% width */
   }
   
   .why-a-supper-club > div:last-child {
-    flex: 0 0 100%;
+    flex: 0 1 50%;
   }
 }
 
 .how-it-works {
   background-color: $site-background-color;
   padding: 2em;
+  text-align: center;
+  
+  > * {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .calendar {
   background-color: $accent-color;
   padding: 1em 2em 1em 2em;
+  text-align: center;
+  
+  > * {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 /** End basic visual and layout styling across the site **/
