@@ -49,6 +49,7 @@
 
   a {
     margin-left: 15px;
+    color: $accent-color !important;
     text-decoration: none;
 
     &:hover {
@@ -388,7 +389,7 @@ p, div {
   margin-top: 2em;
   font-size: 0.9em;
   a {
-    color: $accent-color;
+    color: $accent-color !important;
     text-decoration: underline;
     &:hover {
       text-decoration: none;
