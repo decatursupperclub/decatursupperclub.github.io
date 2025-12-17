@@ -193,7 +193,10 @@ p, div {
 
   a {
     text-decoration: underline;
-    color: $primary-brand-color;
+    color: $primary-brand-color !important;
+    &:hover {
+      text-decoration: none;
+    }
   }
 
 }

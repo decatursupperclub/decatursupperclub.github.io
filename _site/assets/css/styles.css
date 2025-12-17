@@ -58,7 +58,8 @@ nav a:hover:before { height: 100%; }
 html, body { background-color: #f6f5ef; display: flex; flex-direction: column; min-height: 100vh; }
 html h1, html h2, html h3, html h4, html h5, html h6, body h1, body h2, body h3, body h4, body h5, body h6 { font-family: "Kranky", serif; }
 html p, html div, body p, body div { font-family: "McLaren", sans-serif; font-size: 16px; }
-html p a, html div a, body p a, body div a { text-decoration: underline; color: black; }
+html p a, html div a, body p a, body div a { text-decoration: underline; color: #cd293a !important; }
+html p a:hover, html div a:hover, body p a:hover, body div a:hover { text-decoration: none; }
 
 .page-content, main { flex: 1 0 auto; }
 
