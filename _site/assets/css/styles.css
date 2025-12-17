@@ -10,7 +10,7 @@
 .site-subtitle { grid-area: site-subtitle; font-family: "McLaren", sans-serif, sans-serif; font-size: 0.75em; align-self: center; justify-self: start; font-style: italic; }
 
 .nav-links { grid-area: nav-links; display: inline; justify-self: end; align-self: center; text-transform: uppercase; font-size: 0.9em; font-weight: bold; }
-.nav-links a { margin-left: 15px; text-decoration: none; }
+.nav-links a { margin-left: 15px; color: black !important; text-decoration: none; }
 .nav-links a:hover { text-decoration: underline !important; }
 
 /** Begin hamburger menu build **/
@@ -105,8 +105,8 @@ html p a:hover, html div a:hover, body p a:hover, body div a:hover { text-decora
 
 /** End basic visual and layout styling across the site **/
 /** Begin footer styling **/
-.site-footer { background-color: black; color: #ffffff; padding: 2em 1em 2em 1em; margin-top: 2em; font-size: 0.9em; }
-.site-footer a { color: #ffffff; text-decoration: underline; }
+.site-footer { background-color: black; color: #ffffff !important; padding: 2em 1em 2em 1em; margin-top: 2em; font-size: 0.9em; }
+.site-footer a { color: #ffffff !important; text-decoration: underline; }
 .site-footer a:hover { text-decoration: none; }
 .site-footer .footer-col-wrapper { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto auto; gap: 1.5em 2em; grid-template-areas: "site-name links" "made-in-decatur rss"; max-width: 1200px; margin: 0 auto; }
 .site-footer .footer-site-name { grid-area: site-name; text-align: left; }

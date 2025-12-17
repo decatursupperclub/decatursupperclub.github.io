@@ -49,7 +49,7 @@
 
   a {
     margin-left: 15px;
-    color: $accent-color !important;
+    color: black !important;
     text-decoration: none;
 
     &:hover {
@@ -384,10 +384,11 @@ p, div {
 /** Begin footer styling **/
 .site-footer {
   background-color: black;
-  color: $accent-color;
+  color: $accent-color !important;
   padding: 2em 1em 2em 1em;
   margin-top: 2em;
   font-size: 0.9em;
+  
   a {
     color: $accent-color !important;
     text-decoration: underline;
