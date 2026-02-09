@@ -181,6 +181,8 @@ nav a:hover:before {
 html, body {
   background-color: $site-background-color;
   display: flex;
+  background-size: cover;
+  max-width: 100%;
   flex-direction: column;
   min-height: 100vh;
 
@@ -191,6 +193,7 @@ html, body {
 p, div {
   font-family: $font-body;
   font-size: $font-base-size;
+  max-width: 100%;
 
   a {
     text-decoration: underline;
@@ -272,6 +275,7 @@ p, div {
               url('/assets/images/zac-cain-YsHdlBSnsec-unsplash.avif');
   background-size: cover;
   background-position: center;
+  max-width: fill-available;
   justify-content: center;
 
   div {
@@ -376,6 +380,41 @@ p, div {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .recent-dinner-parties {
+    grid-area: recent-posts;
+    margin-right: 1em;
+    padding: 1em;
+    text-align: left;
+  }
+
+  .dinner-party-list {
+    margin-left: 0;
+    list-style: none;
+
+    > li {
+      margin-bottom: 1em;
+      border-bottom: solid lightgray 1px;
+    } 
+  }
+
+  .dinner-party {
+    text-align: left;
+
+    > h3 {
+      margin-bottom: 0.25em;
+    }
+    > div {
+      font-size: 0.9em;
+    }
+    > a {
+      color: $primary-brand-color !important;
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+      }
+    }
   }
 }
 

@@ -56,5 +56,19 @@ robots: index
 <div id="calendar" class="calendar">
   <h2>Dinner Party Calendar</h2>
   <div>View upcoming and past dinner parties from the Decatur Supper Club. <a href="#sign-up">Sign up</a> to join our next dinner party!</div>
-  <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FNew_York&showPrint=0&title=Decatur%20Supper%20Club&src=cDJpZXM1aWVwNGxiM3YwNGV0bWV1dThsMHRkaXBibzNAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%233f51b5" style="border:solid 1px #777; max-width: 100%; margin-top: 1em;" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+  <div class="recent-dinner-parties">
+    {% if site.dinner_parties == nil %}
+      <p>There are no dinner parties scheduled yet. Check back later, or sign up to get notified about new dinner parties.</p>
+    {% else %}
+      {% assign dinner_parties = site.dinner_parties | sort: 'date' | reverse %}
+      {% for dinner_party in dinner_parties %}
+        <div class="dinner-party">
+          <h3>{{ dinner_party.title }}</h3>
+          <div><strong>When:</strong> {{ dinner_party.date | date: "%B %d, %Y" }} at {{ dinner_party.start_time | date: "%l:%M %p" }}</div>
+          <div><strong>Where:</strong> {{ dinner_party.location.city }}, {{ dinner_party.location.state }} {{ dinner_party.location.postalCode }}</div>
+          <div>{{ dinner_party.excerpt }}</div>
+        </div>
+      {% endfor %}
+    {% endif %}
+  </div>
 </div>

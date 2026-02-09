@@ -1,0 +1,42 @@
+---
+layout: base
+---
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "location": {
+    "@type": "Place",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "{{ page.location.city }}",
+      "addressRegion": "{{ page.location.state }}",
+      "postalCode": "{{ page.location.postalCode }}"
+    }
+  },
+  "name": "{{ page.title }}",
+  "startDate": "{{ page.start_time | date: '%Y-%m-%dT%H:%M' }}"
+}
+</script>
+
+<article class="dinner-party" itemscope itemtype="https://schema.org/Event">
+    <h1 itemprop="name">{{ page.title }}</h1>
+    
+    <div class="address" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+        <span itemprop="addressLocality">{{ page.location.city }}</span>, 
+        <span itemprop="addressRegion">{{ page.location.state }}</span> 
+        <span itemprop="postalCode">{{ page.location.postalCode }}</span>
+    </div>
+    
+    <div itemprop="startDate" content="{{ page.start_time | date: '%Y-%m-%dT%H:%M' }}">
+        {{ page.start_time | date: "%I:%M %p" }}
+    </div>
+    
+    <div itemprop="endDate" content="{{ page.end_time | date: '%Y-%m-%dT%H:%M' }}">
+        {{ page.end_time | date: "%I:%M %p" }}
+    </div>
+    
+    <div class="content">
+        {{ content }}
+    </div>
+</article>
